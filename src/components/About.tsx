@@ -4,34 +4,24 @@ const benefits = [
   {
     title: "Személyre szabott",
     desc: "Minden smink a te arcodra, bőrszínedre és stílusodra készül. Nincs sablon — csak te és az alkalom.",
-    gradient: "from-[#D4B8B8] via-[#E5CECE] to-[#F0DEDE]",
+    image: "/images/about-szemelyre.webp",
   },
   {
     title: "Professzionális termékek",
     desc: "Hosszan tartó, HD kamerára optimalizált, bőrbarát kozmetikumokkal dolgozom — érzékeny bőrre is.",
-    gradient: "from-[#C9A7A7] via-[#D9BCBC] to-[#E9D2D2]",
+    image: "/images/about-termekek.webp",
   },
   {
     title: "Helyszínre kiszállás",
     desc: "Menyasszonyi smink esetén Győr és Tapolca környékén a szállásra, esküvői helyszínre is érkezem.",
-    gradient: "from-[#D9C5C5] via-[#E3D2D2] to-[#EEDEDE]",
+    image: "/images/about-helyszin.webp",
   },
   {
     title: "Nyugodt légkör",
     desc: "A készülődés maga is élmény: zene, kávé, pletyka — és közben professzionális munka minden pillanatban.",
-    gradient: "from-[#CFB5B5] via-[#DEC8C8] to-[#EDDBDB]",
+    image: "/images/about-nyugodt.webp",
   },
 ];
-
-function BenefitVisual({ gradient }: { gradient: string }) {
-  return (
-    <div className={`w-full h-full bg-gradient-to-br ${gradient} flex items-center justify-center`}>
-      <div className="h-14 w-14 rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
-        <div className="h-6 w-6 rounded-full bg-white/70" />
-      </div>
-    </div>
-  );
-}
 
 export default function About() {
   return (
@@ -65,7 +55,13 @@ export default function About() {
               <div className="rounded-2xl border border-border bg-surface-card overflow-hidden card-hover group h-full">
                 {/* Visual */}
                 <div className="h-52 sm:h-56 overflow-hidden">
-                  <BenefitVisual gradient={benefit.gradient} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={benefit.image}
+                    alt={benefit.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
                 </div>
                 {/* Text */}
                 <div className="p-5 lg:p-6">

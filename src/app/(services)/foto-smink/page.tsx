@@ -23,6 +23,7 @@ export default function Page() {
         title="Fotó smink — a kamera kedvence"
         subtitle="A kamerára optimalizált smink más, mint a szemnek szánt. HD alapozás, precíz kontúr, mattosított bőr — hogy minden fotón tökéletes legyél."
         gradient="from-[#BE9B9B] via-[#D1B1B1] to-[#E6C9C9]"
+        image="/images/service-foto.webp"
         sections={[
           {
             heading: "Miért más a fotó smink?",

@@ -23,6 +23,7 @@ export default function Page() {
         title="Próbasmink — tervezz nyugodtan a nagy napra"
         subtitle="60-90 percben közösen megtaláljuk az ideális sminket, fotózzuk, jegyzeteljük — hogy a nagy napon már minden rutin legyen."
         gradient="from-[#CFB5B5] via-[#DEC9C9] to-[#EDDFDF]"
+        image="/images/service-probasmink.webp"
         sections={[
           {
             heading: "Miért elengedhetetlen a próbasmink?",

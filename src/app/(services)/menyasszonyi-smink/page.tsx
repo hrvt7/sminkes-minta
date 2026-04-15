@@ -75,6 +75,7 @@ export default function Page() {
         title="Menyasszonyi smink Győrben és Tapolcán"
         subtitle="Ragyogó, egész napig tartó smink életed legszebb napjára. Próbasminkkel, HD termékekkel, helyszínre szállással."
         gradient="from-[#D4B8B8] via-[#E8CFCF] to-[#F5E4E4]"
+        image="/images/service-menyasszonyi.webp"
         sections={[
           {
             heading: "Mi teszi különlegessé a menyasszonyi sminket?",

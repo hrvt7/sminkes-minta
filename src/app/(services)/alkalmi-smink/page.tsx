@@ -23,6 +23,7 @@ export default function Page() {
         title="Alkalmi smink — legyen minden pillanat tökéletes"
         subtitle="Céges rendezvény, esküvői vendég, koszorúslány, keresztelő, ünnepség — az alkalmi smink célja, hogy magabiztos és csillogó legyél."
         gradient="from-[#C9A7A7] via-[#D9BCBC] to-[#EFD5D5]"
+        image="/images/service-alkalmi.webp"
         sections={[
           {
             heading: "Mikor érdemes alkalmi sminket kérni?",

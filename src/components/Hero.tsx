@@ -61,16 +61,16 @@ export default function Hero() {
           {/* Right — card */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <FadeIn direction="right" delay={0.2}>
-              <div className="relative max-w-[280px]">
+              <div className="relative max-w-[320px]">
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/5 to-primary/10 transform rotate-2 scale-[1.02] -z-10" />
                 <div className="rounded-3xl bg-surface-card border border-border shadow-2xl shadow-primary/8 overflow-hidden transform lg:rotate-1 hover:rotate-0 transition-all duration-500">
-                  <div className="aspect-[3/4] img-placeholder flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <div className="h-20 w-20 mx-auto rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center ring-4 ring-white/50 mb-3">
-                        <span className="font-heading font-bold text-white text-3xl">K</span>
-                      </div>
-                      <p className="text-xs text-foreground-secondary font-medium">Kovacsik Kamilla</p>
-                    </div>
+                  <div className="aspect-[3/4] overflow-hidden">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/hero-portrait.webp"
+                      alt="Kovacsik Kamilla sminkes portré"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="p-4 text-center">
                     <h3 className="font-heading font-bold text-foreground text-base">Kovacsik Kamilla</h3>

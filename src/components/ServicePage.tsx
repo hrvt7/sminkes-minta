@@ -4,11 +4,12 @@ interface ServicePageProps {
   title: string;
   subtitle: string;
   gradient: string;
+  image?: string;
   sections: { heading: string; text: string }[];
   relatedServices: { title: string; href: string }[];
 }
 
-export default function ServicePage({ title, subtitle, gradient, sections, relatedServices }: ServicePageProps) {
+export default function ServicePage({ title, subtitle, gradient, image, sections, relatedServices }: ServicePageProps) {
   return (
     <>
       {/* Hero area */}
@@ -16,19 +17,35 @@ export default function ServicePage({ title, subtitle, gradient, sections, relat
         <div className={`absolute inset-0 -z-20 bg-gradient-to-br ${gradient}`} />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-transparent to-surface" />
 
-        <div className="mx-auto max-w-4xl px-5 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-12 sm:pb-14">
-          <FadeIn>
-            <a href="/#szolgaltatasok" className="inline-flex items-center gap-1.5 text-sm text-primary font-medium hover:text-primary-dark transition-colors mb-5">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="15 18 9 12 15 6" />
-              </svg>
-              Vissza a szolgáltatásokhoz
-            </a>
-            <h1 className="font-heading font-extrabold tracking-[-0.03em] text-foreground leading-tight" style={{ fontSize: "clamp(2rem, 4vw + 0.5rem, 3rem)" }}>
-              {title}
-            </h1>
-            <p className="mt-4 text-lg text-foreground-secondary leading-relaxed max-w-2xl">{subtitle}</p>
-          </FadeIn>
+        <div className="mx-auto max-w-5xl px-5 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-12 sm:pb-14">
+          <div className={image ? "grid lg:grid-cols-5 gap-8 lg:gap-12 items-center" : ""}>
+            <div className={image ? "lg:col-span-3" : ""}>
+              <FadeIn>
+                <a href="/#szolgaltatasok" className="inline-flex items-center gap-1.5 text-sm text-primary font-medium hover:text-primary-dark transition-colors mb-5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
+                  Vissza a szolgáltatásokhoz
+                </a>
+                <h1 className="font-heading font-extrabold tracking-[-0.03em] text-foreground leading-tight" style={{ fontSize: "clamp(2rem, 4vw + 0.5rem, 3rem)" }}>
+                  {title}
+                </h1>
+                <p className="mt-4 text-lg text-foreground-secondary leading-relaxed max-w-2xl">{subtitle}</p>
+              </FadeIn>
+            </div>
+            {image && (
+              <div className="lg:col-span-2 flex justify-center lg:justify-end">
+                <FadeIn direction="right" delay={0.15}>
+                  <div className="relative max-w-[360px] w-full">
+                    <div className="rounded-3xl overflow-hidden shadow-2xl shadow-primary/10 border border-border">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={image} alt={title} className="w-full h-auto object-cover" />
+                    </div>
+                  </div>
+                </FadeIn>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 

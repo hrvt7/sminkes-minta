@@ -23,6 +23,7 @@ export default function Page() {
         title="Érettségi és bál smink — felnőtt pillanatok"
         subtitle="Szalagavató, ballagás, érettségi bál, gála — életed egyik legemlékezetesebb napjára egyedi, fotózáson is ragyogó smink."
         gradient="from-[#D4AFAF] via-[#E2C5C5] to-[#F0DBDB]"
+        image="/images/service-erettsegi.webp"
         sections={[
           {
             heading: "Miért különleges a tinédzser smink?",

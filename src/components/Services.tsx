@@ -9,56 +9,44 @@ const services = [
     href: "/menyasszonyi-smink",
     short: "Ragyogó, egész napig tartó smink életed legszebb napjára.",
     detail: "A menyasszonyi smink egy személyre szabott alkotási folyamat — próbasmink keretében közösen megtaláljuk azt a stílust és színvilágot, amely kiemeli a természetes szépségedet. HD alapanyagokkal, vízálló szempillával és hosszan tartó rögzítéssel dolgozom, hogy a smink a ceremónia, a fotózás és a buli végéig is kifogástalan maradjon. Helyszínre szállás Győr és Tapolca környékén lehetséges.",
-    gradient: "from-[#D4B8B8] via-[#E8CFCF] to-[#F5E4E4]",
+    image: "/images/service-menyasszonyi.webp",
   },
   {
     title: "Alkalmi smink",
     href: "/alkalmi-smink",
     short: "Elegáns smink céges rendezvényre, esküvőre, ünnepségre.",
     detail: "Legyen szó koszorúslányi megbízatásról, céges gálavacsoráról, keresztelőről vagy születésnapról — az alkalmi smink célja, hogy magabiztos és csillogó legyél. Az általad hozott ruha és alkalom stílusához igazodva készítem el a sminket, figyelve arra, hogy az fotókon is jól mutasson.",
-    gradient: "from-[#C9A7A7] via-[#D9BCBC] to-[#EFD5D5]",
+    image: "/images/service-alkalmi.webp",
   },
   {
     title: "Nappali smink",
     href: "/nappali-smink",
     short: "Természetes, friss megjelenés hétköznapra vagy fontos találkozóra.",
     detail: "A nappali smink a mindennapok diszkrét eleganciája: puha tónusok, hibátlan alapozás, finom kontúr és természetes ajak. Ideális üzleti találkozóra, randira, ebédre a barátnőkkel vagy egy különleges hétköznapra. Tanítom is a technikát, ha szeretnél otthon is magabiztosan kisminkelni.",
-    gradient: "from-[#D9C5C5] via-[#E5D4D4] to-[#F2E3E3]",
+    image: "/images/service-nappali.webp",
   },
   {
     title: "Fotó smink",
     href: "/foto-smink",
     short: "Kamerára optimalizált smink portré-, divat- és terhes fotózáshoz.",
     detail: "A fotó smink különleges technikát igényel — a kamera érzékenyebb, mint a szabad szem, így az árnyalás, a highlight és a kontúrozás is intenzívebb. Portré, divat, terhes-, családi- vagy influencer-fotózásra dolgozom fotósokkal és magán megrendelőkkel. A smink mattosítva készül, hogy a vakufényben se csillogjon.",
-    gradient: "from-[#BE9B9B] via-[#D1B1B1] to-[#E6C9C9]",
+    image: "/images/service-foto.webp",
   },
   {
     title: "Érettségi & bál smink",
     href: "/erettsegi-bal-smink",
     short: "Egyedi smink az életed egyik legemlékezetesebb napjára.",
     detail: "Szalagavató, ballagás, érettségi bál — ezek azok a napok, amikor szeretnél felnőttnek látszani, de mégis önmagad maradni. A tinédzser bőrre szabott, nem túlzsúfolt, de látványos sminket készítek, amely a fotókon is remekül mutat és estig kitart a táncparketten.",
-    gradient: "from-[#D4AFAF] via-[#E2C5C5] to-[#F0DBDB]",
+    image: "/images/service-erettsegi.webp",
   },
   {
     title: "Próbasmink",
     href: "/probasmink",
     short: "Nyugodt közös tervezés a nagy nap sminkjéhez.",
     detail: "A próbasmink elengedhetetlen része a menyasszonyi és fontosabb alkalmi sminkeknek. 60-90 percben közösen megtaláljuk a nekedvaló tónusokat, szemhéjárnyékolást, ajakszínt. Fotózzuk és jegyzeteljük a receptet, hogy a nagy napon már minden a helyén legyen. Érdemes 3-6 héttel az alkalom előtt időzíteni.",
-    gradient: "from-[#CFB5B5] via-[#DEC9C9] to-[#EDDFDF]",
+    image: "/images/service-probasmink.webp",
   },
 ];
-
-function ServiceVisual({ gradient }: { gradient: string }) {
-  return (
-    <div className={`w-full h-full bg-gradient-to-br ${gradient} flex items-center justify-center`}>
-      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.7">
-        <path d="M9 2l1 5h4l1-5" />
-        <path d="M8 7l1 15h6l1-15z" />
-        <rect x="9" y="19" width="6" height="3" rx="0.5" />
-      </svg>
-    </div>
-  );
-}
 
 /* ── Desktop: expandable card ── */
 function DesktopCard({ service, index }: { service: typeof services[number]; index: number }) {
@@ -77,7 +65,8 @@ function DesktopCard({ service, index }: { service: typeof services[number]; ind
           <div className={`h-14 w-14 shrink-0 rounded-2xl overflow-hidden transition-all duration-300 ${
             open ? "ring-2 ring-primary/30" : "ring-1 ring-border"
           }`}>
-            <ServiceVisual gradient={service.gradient} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={service.image} alt={service.title} className="w-full h-full object-cover" loading="lazy" />
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex items-start justify-between gap-2">
@@ -101,7 +90,8 @@ function DesktopCard({ service, index }: { service: typeof services[number]; ind
           <div className="px-4 lg:px-5 pb-5 h-[360px] flex flex-col">
             <div className="border-t border-border-light pt-4 flex flex-col flex-1">
               <div className="mb-3 rounded-xl overflow-hidden shrink-0 h-[150px]">
-                <ServiceVisual gradient={service.gradient} />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={service.image} alt={service.title} className="w-full h-full object-cover" loading="lazy" />
               </div>
               <p className="text-[0.85rem] text-foreground-secondary leading-[1.7] line-clamp-5 flex-1">{service.detail}</p>
               <a
@@ -131,7 +121,8 @@ function MobileCard({ service, index }: { service: typeof services[number]; inde
         className="flex flex-col rounded-xl border border-border bg-surface-card overflow-hidden card-hover group w-full"
       >
         <div className="w-full aspect-square overflow-hidden">
-          <ServiceVisual gradient={service.gradient} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={service.image} alt={service.title} className="w-full h-full object-cover" loading="lazy" />
         </div>
         <div className="px-2 py-2.5 text-center h-[3rem] flex items-center justify-center">
           <h3 className="font-heading text-[0.7rem] font-bold text-foreground tracking-[-0.01em] leading-tight line-clamp-2">

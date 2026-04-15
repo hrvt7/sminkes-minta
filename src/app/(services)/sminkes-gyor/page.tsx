@@ -13,6 +13,7 @@ export default function Page() {
       title="Sminkes Győrben"
       subtitle="Menyasszonyi, alkalmi, nappali és fotó smink Győrben — Kovacsik Kamilla professzionális sminkes."
       gradient="from-[#D4B8B8] via-[#E5CECE] to-[#F5E4E4]"
+      image="/images/hero-portrait.webp"
       sections={[
         {
           heading: "Miért érdemes győri sminkest választani?",

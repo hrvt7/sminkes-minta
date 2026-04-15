@@ -23,6 +23,7 @@ export default function Page() {
         title="Nappali smink — diszkréten, de észrevehetően"
         subtitle="Természetes, friss, hibátlan bőr, finom tónusok. A hétköznap észrevétlen eleganciája."
         gradient="from-[#D9C5C5] via-[#E5D4D4] to-[#F2E3E3]"
+        image="/images/service-nappali.webp"
         sections={[
           {
             heading: "Mi a nappali smink titka?",
