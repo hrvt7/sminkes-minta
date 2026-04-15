@@ -32,14 +32,16 @@ export default function Header() {
         <div className="flex h-[72px] items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center gap-3 group">
-            <div className="h-11 w-11 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center ring-2 ring-primary/20">
+            <div className="h-11 w-11 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center ring-2 ring-white/30">
               <span className="font-heading font-bold text-white text-base">K</span>
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="text-base sm:text-lg font-heading font-bold tracking-[-0.02em] text-foreground">
+              <span className={`text-base sm:text-lg font-heading font-bold tracking-[-0.02em] transition-colors ${scrolled ? "text-foreground" : "text-white drop-shadow-sm"}`}>
                 Makeup by Kamilla
               </span>
-              <span className="text-xs text-foreground-muted font-medium">Sminkes — Győr &amp; Tapolca</span>
+              <span className={`text-xs font-medium transition-colors ${scrolled ? "text-foreground-muted" : "text-white/80 drop-shadow-sm"}`}>
+                Sminkes — Győr &amp; Tapolca
+              </span>
             </div>
           </a>
 
@@ -48,7 +50,7 @@ export default function Header() {
             href="https://www.instagram.com/kovacsik_kamilla_sminkes/"
             target="_blank"
             rel="noopener noreferrer"
-            className="md:hidden flex items-center gap-1.5 text-foreground font-semibold text-sm"
+            className={`md:hidden flex items-center gap-1.5 font-semibold text-sm transition-colors ${scrolled ? "text-foreground" : "text-white drop-shadow-sm"}`}
             aria-label="Instagram"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -65,7 +67,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-[0.9rem] font-medium text-foreground hover:text-primary transition-colors duration-200"
+                className={`text-[0.9rem] font-medium hover:text-primary transition-colors duration-200 ${scrolled ? "text-foreground" : "text-white drop-shadow-sm hover:text-[#E8D4D4]"}`}
               >
                 {link.label}
               </a>
@@ -81,7 +83,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden p-2 rounded-lg text-foreground hover:bg-surface-alt transition-colors"
+            className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? "text-foreground hover:bg-surface-alt" : "text-white hover:bg-white/10"}`}
             aria-label="Menü"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
