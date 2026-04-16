@@ -24,8 +24,8 @@ export default function Hero() {
           className="w-full h-full object-cover hidden lg:block"
         />
         {/* Subtle dark overlay for text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1F2E14]/70 via-[#1F2E14]/40 to-transparent hidden lg:block" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1F2E14]/60 via-[#1F2E14]/30 to-[#1F2E14]/60 lg:hidden" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#3D1F2E]/70 via-[#3D1F2E]/40 to-transparent hidden lg:block" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#3D1F2E]/60 via-[#3D1F2E]/30 to-[#3D1F2E]/60 lg:hidden" />
         {/* Bottom fade — blends into the Services section (surface-alt: #F5E8E8) */}
         <div className="absolute inset-x-0 bottom-0 h-32 sm:h-48 lg:h-56 bg-gradient-to-b from-transparent via-[#F5E8E8]/60 to-[#F5E8E8] pointer-events-none" />
       </div>
