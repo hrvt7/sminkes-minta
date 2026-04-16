@@ -4,7 +4,7 @@ import ServicePage from "@/components/ServicePage";
 export const metadata: Metadata = {
   title: "Sminkes Győrben — Makeup by Kamilla Kovacsik",
   description: "Sminkes Győrben — menyasszonyi, alkalmi, nappali, fotó és érettségi smink. Professzionális termékek, személyre szabott stílus. Kovacsik Kamilla.",
-  alternates: { canonical: "https://sminkes.vercel.app/sminkes-gyor" },
+  alternates: { canonical: "https://makeupbykamilla.vercel.app/sminkes-gyor" },
 };
 
 export default function Page() {

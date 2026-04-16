@@ -4,7 +4,7 @@ import ServicePage from "@/components/ServicePage";
 export const metadata: Metadata = {
   title: "Alkalmi smink Győrben és Tapolcán — Makeup by Kamilla",
   description: "Alkalmi smink Győrben és Tapolcán — céges rendezvényre, esküvői vendégnek, ünnepségre. Tartós, hibátlan, fotózáson is gyönyörű. Kovacsik Kamilla sminkes.",
-  alternates: { canonical: "https://sminkes.vercel.app/alkalmi-smink" },
+  alternates: { canonical: "https://makeupbykamilla.vercel.app/alkalmi-smink" },
 };
 
 const serviceSchema = {
@@ -12,7 +12,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Alkalmi smink",
   description: "Alkalmi smink céges rendezvényre, esküvői vendégeknek, koszorúslányoknak, ünnepségekre.",
-  provider: { "@id": "https://sminkes.vercel.app/#business" },
+  provider: { "@id": "https://makeupbykamilla.vercel.app/#business" },
 };
 
 export default function Page() {

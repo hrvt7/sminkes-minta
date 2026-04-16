@@ -20,7 +20,7 @@ const body = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sminkes.vercel.app"),
+  metadataBase: new URL("https://makeupbykamilla.vercel.app"),
   title: {
     default: "Makeup by Kamilla Kovacsik — Sminkes | Győr & Tapolca",
     template: "%s | Makeup by Kamilla",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Makeup by Kamilla Kovacsik — Sminkes | Győr & Tapolca",
     description:
       "Professzionális sminkes Győrben és Tapolcán. Menyasszonyi, alkalmi, nappali és fotó smink.",
-    url: "https://sminkes.vercel.app",
+    url: "https://makeupbykamilla.vercel.app",
     siteName: "Makeup by Kamilla Kovacsik",
     locale: "hu_HU",
     type: "website",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://sminkes.vercel.app",
+    canonical: "https://makeupbykamilla.vercel.app",
   },
 };
 
@@ -66,13 +66,13 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "BeautySalon",
-              "@id": "https://sminkes.vercel.app/#business",
+              "@id": "https://makeupbykamilla.vercel.app/#business",
               name: "Makeup by Kamilla Kovacsik",
               description:
                 "Professzionális sminkes Győrben és Tapolcán. Menyasszonyi, alkalmi, nappali, fotó és érettségi smink. Kovacsik Kamilla — természetes, tartós smink minden alkalomra.",
-              url: "https://sminkes.vercel.app",
+              url: "https://makeupbykamilla.vercel.app",
               email: "kapcsolat@makeupbykamilla.hu",
-              image: "https://sminkes.vercel.app/images/kamilla.webp",
+              image: "https://makeupbykamilla.vercel.app/images/kamilla.webp",
               address: [
                 {
                   "@type": "PostalAddress",
@@ -111,11 +111,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "@id": "https://sminkes.vercel.app/#person",
+              "@id": "https://makeupbykamilla.vercel.app/#person",
               name: "Kovacsik Kamilla",
               jobTitle: "Sminkes / Makeup Artist",
-              worksFor: { "@id": "https://sminkes.vercel.app/#business" },
-              url: "https://sminkes.vercel.app",
+              worksFor: { "@id": "https://makeupbykamilla.vercel.app/#business" },
+              url: "https://makeupbykamilla.vercel.app",
               sameAs: [
                 "https://www.instagram.com/kovacsik_kamilla_sminkes/",
               ],

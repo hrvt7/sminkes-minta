@@ -4,7 +4,7 @@ import ServicePage from "@/components/ServicePage";
 export const metadata: Metadata = {
   title: "Fotó smink Győrben és Tapolcán — Makeup by Kamilla",
   description: "Fotó smink portré-, divat- és terhes fotózáshoz Győrben és Tapolcán. Kamerára optimalizált, HD termékek. Kovacsik Kamilla sminkes.",
-  alternates: { canonical: "https://sminkes.vercel.app/foto-smink" },
+  alternates: { canonical: "https://makeupbykamilla.vercel.app/foto-smink" },
 };
 
 const serviceSchema = {
@@ -12,7 +12,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Fotó smink",
   description: "Kamerára optimalizált smink portré-, divat-, terhes- és családi fotózáshoz.",
-  provider: { "@id": "https://sminkes.vercel.app/#business" },
+  provider: { "@id": "https://makeupbykamilla.vercel.app/#business" },
 };
 
 export default function Page() {

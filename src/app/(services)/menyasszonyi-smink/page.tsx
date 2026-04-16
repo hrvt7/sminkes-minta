@@ -4,7 +4,7 @@ import ServicePage from "@/components/ServicePage";
 export const metadata: Metadata = {
   title: "Menyasszonyi smink Győrben és Tapolcán — Makeup by Kamilla",
   description: "Menyasszonyi smink Győrben és Tapolcán. HD termékek, vízálló rögzítés, helyszínre szállás. Próbasminkkel, személyre szabott stílussal. Kovacsik Kamilla sminkes.",
-  alternates: { canonical: "https://sminkes.vercel.app/menyasszonyi-smink" },
+  alternates: { canonical: "https://makeupbykamilla.vercel.app/menyasszonyi-smink" },
 };
 
 const serviceSchema = {
@@ -12,7 +12,7 @@ const serviceSchema = {
   "@type": "Service",
   name: "Menyasszonyi smink",
   description: "Professzionális menyasszonyi smink HD termékekkel, próbasminkkel, helyszínre szállással Győr és Tapolca környékén.",
-  provider: { "@id": "https://sminkes.vercel.app/#business" },
+  provider: { "@id": "https://makeupbykamilla.vercel.app/#business" },
   areaServed: [
     { "@type": "City", name: "Győr" },
     { "@type": "City", name: "Tapolca" },
