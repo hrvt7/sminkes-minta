@@ -85,13 +85,13 @@ export default function Hero() {
               <div className="relative max-w-[320px]">
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 transform rotate-2 scale-[1.02] -z-10" />
                 <div className="rounded-3xl bg-surface-card border border-white/20 shadow-2xl shadow-black/40 overflow-hidden transform lg:rotate-1 hover:rotate-0 transition-all duration-500">
-                  <div className="aspect-square overflow-hidden">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="/images/hero-kamilla.webp"
-                      alt="Minta Anna sminkes"
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="aspect-square overflow-hidden img-placeholder flex items-center justify-center">
+                    <div className="text-center p-6">
+                      <div className="h-20 w-20 mx-auto rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center ring-4 ring-white/50 mb-3">
+                        <span className="font-heading font-bold text-white text-3xl">M</span>
+                      </div>
+                      <p className="text-xs text-white/70 font-medium">Profilkép helye</p>
+                    </div>
                   </div>
                   <div className="p-4 text-center">
                     <h3 className="font-heading font-bold text-foreground text-base">Minta Anna</h3>

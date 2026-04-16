@@ -32,12 +32,9 @@ export default function Header() {
         <div className="flex h-[72px] items-center justify-between">
           {/* Logo */}
           <a href="/" className="flex items-center gap-3 group">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/hero-kamilla.webp"
-              alt="Minta Anna"
-              className="h-11 w-11 rounded-full object-cover ring-2 ring-white/30"
-            />
+            <div className="h-11 w-11 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center ring-2 ring-white/30">
+              <span className="font-heading font-bold text-white text-base">M</span>
+            </div>
             <div className="flex flex-col leading-tight">
               <span className={`text-base sm:text-lg font-heading font-bold tracking-[-0.02em] transition-colors ${scrolled ? "text-foreground" : "text-white drop-shadow-sm"}`}>
                 Makeup by Anna
